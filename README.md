@@ -4,7 +4,7 @@ Objective:
 The objectives of the project are:
 1.	Protection against high and low voltages in mains.
 2.	Protection against Switching-ON surge whenever AC mains restores.
-
+____________________________________________________________________________________________________________________________
 
 Equipment:
 
@@ -24,11 +24,12 @@ Equipment:
 •	Op-Amps A1, A2 = Lm324
 •	Transformer, TR1 = 12V/1000mA
 •	Relay = 12V SPDT
+____________________________________________________________________________________________________________________________
 
 Circuit Diagram
 
 <img width="461" height="323" alt="Circuit Diagram" src="https://github.com/user-attachments/assets/d2b64280-4781-4fca-a97d-edf36ee3a2ed" />
-
+____________________________________________________________________________________________________________________________
 
 Circuit Operation Process:
 
@@ -36,7 +37,7 @@ Step-Down and Rectification:
 
 1.	The transformer (TR1) steps down the AC mains voltage.
 2.	The rectifier (D1–D4) converts AC to DC, and C1 smooths it.
-
+____________________________________________________________________________________________________________________________
 
 Voltage Sensing Using Window Comparators:
 
@@ -44,13 +45,15 @@ Voltage Sensing Using Window Comparators:
 
 1.	A1 and A2 (in LM324) compare the input voltage to preset reference values.
 2.	Z1 and Z2 (Zener diodes) provide reference voltages to determine safe operating limits.
- 
+____________________________________________________________________________________________________________________________
+
 Undervoltage and Overvoltage Detection:
 
 1.	While the mains AC voltage is within safe limits, the outputs of the op-amp remain at 0V, which keeps the transistor T1 switched OFF. While T1 remains switched OFF, T2 remains switched ON causing the relay also to be in switched ON position. In this position the relay contacts are at the N/O position which allows the Bulb to be switched ON and working.
 2.	If voltage is too high, A1's output goes HIGH, turning ON LED1 and turning ON T1 as a result T2 base is grounded by T1, so T2 turns OFF. When T2 switches OFF, it switches OFF the relay as well, causing its contacts to move towards its N/C position.
 3.	If voltage is too low, A2’s output goes HIGH, turning ON LED2 and turning ON T1 as a result T2 base is grounded by T1, so T2 turns OFF. When T2 switches OFF, it switches OFF the relay as well, causing its contacts to move towards its N/C position.
 4.	With the relay contacts are at N/C position, the voltage supply is cut off for the Bulb, which safeguards it from the abnormal voltage situation.
+____________________________________________________________________________________________________________________________
 
 
 Relay Operation:
@@ -58,6 +61,7 @@ Relay Operation:
 1.	The relay is controlled by T2.
 2.	If voltage is abnormal, the relay disconnects appliances.
 3.	If voltage is normal, the relay connects appliances.
+____________________________________________________________________________________________________________________________
 
 Switching Surge Protection:
 
@@ -67,19 +71,13 @@ Switching Surge Protection:
 
 Figure: Initial high magnitude Inrush current when switching on (Switching Surge).
 
-
-1.	The switch ON voltage surge is handled by the delay ON timer configuration built using D8, C2, R6.
-2.	Whenever there is an input AC mains supply failure or interruption, C2 is fully discharged via R6.
-3.	Now, when the AC mains voltage returns, T2 and the relay are inhibited from switching ON instantly.
-4.	During this period, C2 slowly charges and keeps the base voltage of T2 below 0.6V causing it to be switched OFF, so that the relay and the home appliances also remain switched OFF.
-5.	As C2 charges slowly via R5, after some delay the voltage across C2 reaches above 0.6V which is enough to switch ON T2, relay and the appliances very softly.
-6.	This slight delayed switch ON after the mains has restored guards the Bulb from a possible hazardous switch ON voltage surge.
-
-
-
-
-
-
+2.	The switch ON voltage surge is handled by the delay ON timer configuration built using D8, C2, R6.
+3.	Whenever there is an input AC mains supply failure or interruption, C2 is fully discharged via R6.
+4.	Now, when the AC mains voltage returns, T2 and the relay are inhibited from switching ON instantly.
+5.	During this period, C2 slowly charges and keeps the base voltage of T2 below 0.6V causing it to be switched OFF, so that the relay and the home appliances also remain switched OFF.
+6.	As C2 charges slowly via R5, after some delay the voltage across C2 reaches above 0.6V which is enough to switch ON T2, relay and the appliances very softly.
+7.	This slight delayed switch ON after the mains has restored guards the Bulb from a possible hazardous switch ON voltage surge.
+____________________________________________________________________________________________________________________________
 
 Tuning Process for Window Comparator:
 
@@ -94,11 +92,13 @@ Tuning Process for Window Comparator:
 9.	Then P2 potentiometer is carefully adjusted until the LED2 just illuminates. By doing this, the lower limit point is tuned.
 10.	Now restore the connections of the transformer and R5.
 11.	Now the circuit is ready for operation.
+____________________________________________________________________________________________________________________________
 
 Practical Circuit:
 
 <img width="976" height="510" alt="image" src="https://github.com/user-attachments/assets/65a676b7-a5dd-4bea-975b-1a8208be4fff" />
 <img width="974" height="615" alt="image" src="https://github.com/user-attachments/assets/758c56a5-d4c3-4c00-acf2-5e3d0ef89536" />
+____________________________________________________________________________________________________________________________
 
 Application:
 1.	Home Appliance Protection : Protects household devices such as televisions, refrigerators,fans, and air conditioners from overvoltage and undervoltage conditions.
@@ -108,6 +108,7 @@ Application:
 5.	Switching Surge Protection : Provides protection against high inrush voltage when the power supply is restored.
 6.	Voltage Monitoring System : Continuously monitors the voltage level and detects abnormal conditions in real time.
 
+____________________________________________________________________________________________________________________________
 
 
 Limitation:
@@ -129,3 +130,4 @@ In this project, we tried to improve the surge protector circuit of experiment 6
 
 This project that we built can be used with any home appliances for protection purposes. Future improvements may include more compact, user-friendly system, power waste reduction etc.
 
+____________________________________________________________________________________________________________________________
