@@ -2,8 +2,8 @@
 Objective:
 
 The objectives of the project are:
-•	Protection against high and low voltages in mains.
-•	Protection against Switching-ON surge whenever AC mains restores.
+1.	Protection against high and low voltages in mains.
+2.	Protection against Switching-ON surge whenever AC mains restores.
 
 
 Equipment:
