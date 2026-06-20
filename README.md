@@ -98,7 +98,9 @@ Practical Circuit:
 
 <img width="976" height="510" alt="image" src="https://github.com/user-attachments/assets/65a676b7-a5dd-4bea-975b-1a8208be4fff" />
 <img width="974" height="615" alt="image" src="https://github.com/user-attachments/assets/758c56a5-d4c3-4c00-acf2-5e3d0ef89536" />
+
 ____________________________________________________________________________________________________________________________
+
 
 Application:
 1.	Home Appliance Protection : Protects household devices such as televisions, refrigerators,fans, and air conditioners from overvoltage and undervoltage conditions.
